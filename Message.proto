@@ -5,12 +5,17 @@ package App.Protobuf;
 option php_namespace = "App\\Protobuf";
 option php_metadata_namespace = "App\\Protobuf\\GPBMetadata";
 
-message MicroServicesMessage {
+message ServicesMessage {
     Clip clip = 1;
     string service = 2;
 }
 
-message ApiMessage {
+message SoundExtractorMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message SubtitleGeneratorMessage {
     Clip clip = 1;
     string service = 2;
 }
@@ -51,6 +56,7 @@ enum ClipStatus {
     VIDEO_INCRUSTATOR_ERROR = 24;
 
     VIDEO_READY = 25;
+    STATUS_ERROR = 26;
 }
 
 message Clip {
