@@ -20,6 +20,36 @@ message SubtitleGeneratorMessage {
     string service = 2;
 }
 
+message SubtitleMergerMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message SubtitleTransformerMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message SubtitleIncrustatorMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message VideoFormatterMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message VideoIncrustatorMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
+message VideoSplitterMessage {
+    Clip clip = 1;
+    string service = 2;
+}
+
 enum ClipStatus {
     UPLOADED = 0;
 
