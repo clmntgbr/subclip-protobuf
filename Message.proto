@@ -50,6 +50,35 @@ message VideoSplitterMessage {
     string service = 2;
 }
 
+enum ConfigurationSubtitleShadow {
+    SHADOW_NONE = 0;
+    SHADOW_SOFT = 1;
+    SHADOW_MEDIUM = 2;
+    SHADOW_BOLD = 3;
+    SHADOW_HARD = 4;
+}
+
+enum ConfigurationSubtitleOutlineThickness{
+    OUTLINE_NONE = 0;
+    OUTLINE_SOFT = 1;
+    OUTLINE_MEDIUM = 2;
+    OUTLINE_BOLD = 3;
+    OUTLINE_HARD = 4;
+}
+
+enum ConfigurationSubtitleFont {
+    ARIAL = 0;
+    TIMES_NEW_ROMAN = 1;
+    COURIER_NEW = 2;
+}
+
+enum VideoFormatStyle {
+    ORIGINAL = 0;
+    ZOOMED_916 = 1;
+    NORMAL_916_WITH_BORDERS = 2;
+    DUPLICATED_BLURRED_916 = 3;
+}
+
 enum ClipStatus {
     UPLOADED = 0;
 
@@ -95,6 +124,7 @@ message Clip {
     string status = 3;
     Video originalVideo = 4;
     string cover = 5;
+    Configuration configuration = 6;
 }
 
 message Video {
@@ -108,4 +138,20 @@ message Video {
     optional string ass = 8;
     repeated string subtitles = 9;
     repeated string audios = 10;
+}
+
+message Configuration {
+    string id = 1;
+    string subtitleFont = 2;
+    int64 subtitleSize = 3;
+    string subtitleColor = 4;
+    string subtitleBold = 5;
+    string subtitleItalic = 6;
+    string subtitleUnderline = 7;
+    string subtitleOutlineColor = 8;
+    int64 subtitleOutlineThickness = 9;
+    int64 subtitleShadow = 10;
+    string subtitleShadowColor = 11;
+    string format = 12;
+    int64 split = 13;
 }
