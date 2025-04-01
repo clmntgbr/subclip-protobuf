@@ -5,7 +5,7 @@ package App.Protobuf;
 option php_namespace = "App\\Protobuf";
 option php_metadata_namespace = "App\\Protobuf\\GPBMetadata";
 
-message ServicesMessage {
+message TaskMessage {
     Clip clip = 1;
     string service = 2;
 }
