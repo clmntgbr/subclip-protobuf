@@ -125,6 +125,7 @@ message Clip {
     Video originalVideo = 4;
     string cover = 5;
     Configuration configuration = 6;
+    optional Video processedVideo = 7;
 }
 
 message Video {
