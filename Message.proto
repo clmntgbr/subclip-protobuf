@@ -98,13 +98,13 @@ enum ClipStatus {
     SUBTITLE_TRANSFORMER_COMPLETE = 11;
     SUBTITLE_TRANSFORMER_ERROR = 12;
 
-    SUBTITLE_INCRUSTATOR_PENDING = 13;
-    SUBTITLE_INCRUSTATOR_COMPLETE = 14;
-    SUBTITLE_INCRUSTATOR_ERROR = 15;
+    VIDEO_FORMATTER_PENDING = 13;
+    VIDEO_FORMATTER_COMPLETE = 14;
+    VIDEO_FORMATTER_ERROR = 15;
 
-    VIDEO_FORMATTER_PENDING = 16;
-    VIDEO_FORMATTER_COMPLETE = 17;
-    VIDEO_FORMATTER_ERROR = 18;
+    SUBTITLE_INCRUSTATOR_PENDING = 16;
+    SUBTITLE_INCRUSTATOR_COMPLETE = 17;
+    SUBTITLE_INCRUSTATOR_ERROR = 18;
 
     VIDEO_SPLITTER_PENDING = 19;
     VIDEO_SPLITTER_COMPLETE = 20;
@@ -144,15 +144,16 @@ message Video {
 message Configuration {
     string id = 1;
     string subtitleFont = 2;
-    int64 subtitleSize = 3;
+    string subtitleSize = 3;
     string subtitleColor = 4;
     string subtitleBold = 5;
     string subtitleItalic = 6;
     string subtitleUnderline = 7;
     string subtitleOutlineColor = 8;
-    int64 subtitleOutlineThickness = 9;
-    int64 subtitleShadow = 10;
+    string subtitleOutlineThickness = 9;
+    string subtitleShadow = 10;
     string subtitleShadowColor = 11;
     string format = 12;
-    int64 split = 13;
+    string split = 13;
+    string marginV = 14;
 }
