@@ -79,6 +79,10 @@ enum VideoFormatStyle {
     DUPLICATED_BLURRED_916 = 3;
 }
 
+enum SocialAccountType {
+    TIKTOK = 0;
+}
+
 enum ClipStatus {
     UPLOADED = 0;
 
