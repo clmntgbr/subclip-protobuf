@@ -83,6 +83,12 @@ enum SocialAccountType {
     TIKTOK = 0;
 }
 
+enum VideoPublishStatus {
+    UPLOADING = 0;
+    PUBLISHED = 1;
+    ERROR = 2;
+}
+
 enum ClipStatus {
     UPLOADED = 0;
 
@@ -118,8 +124,10 @@ enum ClipStatus {
     VIDEO_INCRUSTATOR_COMPLETE = 23;
     VIDEO_INCRUSTATOR_ERROR = 24;
 
-    VIDEO_READY = 25;
-    STATUS_ERROR = 26;
+    CLIP_READY = 25;
+    CLIP_UPLOADING = 26;
+    CLIP_UPLOADED = 27;
+    STATUS_ERROR = 28;
 }
 
 message Clip {
