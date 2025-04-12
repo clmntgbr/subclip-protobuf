@@ -168,4 +168,5 @@ message Configuration {
     string format = 12;
     string split = 13;
     string marginV = 14;
+    string privacyOptions = 15;
 }
